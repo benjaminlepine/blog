@@ -7,6 +7,16 @@ import { ArticleService } from '../services/article.service';
   styleUrls: ['./article-view.component.css']
 })
 export class ArticleViewComponent implements OnInit {
+  lastUpdate = new Promise(
+    (resolve, reject)=>{
+      const date = new Date();
+      setTimeout(
+        ()=>{
+          resolve(date);
+        }, 100
+      );
+    }
+  );
   articles: any[];
   constructor( private articleService: ArticleService) { }
 
