@@ -7,7 +7,7 @@ import {ArticleService} from "../services/article.service";
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-  @Input() indexOfArticle: string;
+  @Input() indexOfArticle: number;
   @Input() ArticleName: string;
   @Input() ArticleStatus: string;
   @Input() ArticleContent: string;
@@ -17,8 +17,12 @@ export class ArticleComponent implements OnInit {
   ngOnInit() {
   }
 
-  message() {
-    console.log('toto');
+  like() {
+    this.articleService.like(this.indexOfArticle);
+  }
+
+  dislike() {
+    this.articleService.dislike(this.indexOfArticle);
   }
 
 }

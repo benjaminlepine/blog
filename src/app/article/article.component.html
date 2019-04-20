@@ -1,12 +1,16 @@
 <li [ngClass]="{'list-group-item': true}">
   <h4>{{ArticleName}}</h4>
-  <p>{{ArticleContent}}</p>
-  <div class="container2like">
-    <div class="container-like">
-      <img (click)="message()" class="like" src="../assets/like_mc.png">
+  <p class="articlecontent">{{ArticleContent}}</p>
+  <div class="first-container">
+    <div class="container">
+      <div (click)="like()"
+           [ngClass]="{ 'like_mc': ArticleStatus === 'unlike'||'dislike',
+           'like': ArticleStatus === 'like'}"></div>
     </div>
-    <div class="container-like">
-      <img class="like" src="../assets/dislike_mc.png">
+    <div class="container">
+      <div (click)="dislike()"
+           [ngClass]="{ 'dislike_mc': ArticleStatus === 'unlike'||'like',
+           'dislike': ArticleStatus === 'dislike'}"></div>
     </div>
   </div>
 </li>
