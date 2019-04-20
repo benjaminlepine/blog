@@ -1,0 +1,12 @@
+<li [ngClass]="{'list-group-item': true}">
+  <h4>{{ArticleName}}</h4>
+  <p>{{ArticleContent}}</p>
+  <div class="container2like">
+    <div class="container-like">
+      <img (click)="message()" class="like" src="../assets/like_mc.png">
+    </div>
+    <div class="container-like">
+      <img class="like" src="../assets/dislike_mc.png">
+    </div>
+  </div>
+</li>

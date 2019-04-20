@@ -1,0 +1,11 @@
+.liste-of-articles{
+  padding-left: 21%;
+  padding-right: 21%;
+}
+
+@media screen and (max-width: 1000px) {
+  .liste-of-articles{
+    padding-left:4%;
+    padding-right:4%;
+  }
+}

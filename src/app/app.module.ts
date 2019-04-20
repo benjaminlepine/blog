@@ -1,18 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from "@angular/router";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ArticleViewComponent } from './article-view/article-view.component';
+import { ArticleComponent } from './article/article.component';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
+import { ArticleService } from './services/article.service';
+
+
+const appRoutes: Routes = [
+  {path: '', component: ArticleViewComponent}
+]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ArticleViewComponent,
+    ArticleComponent,
+    ArticleDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    ArticleService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

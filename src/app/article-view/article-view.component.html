@@ -1,0 +1,12 @@
+<div class="col-xs-12">
+  <h2>Mes articles</h2>
+<ul class="liste-of-articles">
+<app-article *ngFor="let article of articles; let i = index"
+             [indexOfArticle]="i"
+             [ArticleName]="article.name"
+             [ArticleStatus]="article.status"
+             [ArticleContent]="article.content"
+             [id]="article.id"
+></app-article>
+</ul>
+</div>
