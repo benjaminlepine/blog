@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ArticleService} from "../services/article.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-article',
@@ -12,7 +13,7 @@ export class ArticleComponent implements OnInit {
   @Input() ArticleStatus: string;
   @Input() ArticleContent: string;
   @Input() id: number;
-  constructor(private articleService: ArticleService ) { }
+  constructor(private articleService: ArticleService, private router: Router ) { }
 
   ngOnInit() {
   }
@@ -24,5 +25,4 @@ export class ArticleComponent implements OnInit {
   dislike() {
     this.articleService.dislike(this.indexOfArticle);
   }
-
 }

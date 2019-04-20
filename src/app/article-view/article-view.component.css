@@ -1,6 +1,7 @@
 .liste-of-articles{
   padding-left: 21%;
   padding-right: 21%;
+  margin-bottom: 70px;
 }
 
 @media screen and (max-width: 1000px) {

@@ -11,7 +11,9 @@ import { ArticleService } from './services/article.service';
 
 
 const appRoutes: Routes = [
-  {path: '', component: ArticleViewComponent}
+  {path: '', component: ArticleViewComponent},
+  {path: 'article', component: ArticleDetailComponent},
+  {path: 'article/:id', component: ArticleDetailComponent}
 ]
 
 @NgModule({

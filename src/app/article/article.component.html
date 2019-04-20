@@ -1,6 +1,8 @@
-<li [ngClass]="{'list-group-item': true}">
+<li class="article-preview" [ngClass]="{'list-group-item': true}">
   <h4>{{ArticleName}}</h4>
   <p class="articlecontent">{{ArticleContent}}</p>
+  <!--<a (click)="navigateToArticleDetail()">Lire le post</a>-->
+  <a [routerLink]="['article/',id]">Lire le post</a>
   <div class="first-container">
     <div class="container">
       <div (click)="like()"

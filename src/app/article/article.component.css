@@ -33,5 +33,10 @@
   padding-bottom: 0;
 }
 
+.article-preview:hover{
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1250px){.first-container{margin-left: 85%;}}
 @media screen and (max-width: 670px){.first-container{margin-left: 81%;}}

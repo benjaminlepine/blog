@@ -24,6 +24,14 @@ export class ArticleService {
       'Ut enim ad minim veniam, quis consequat. ' +
       'Duis aute esse cillum dolore eu fugiat nulla pariatur. '
     },
+    {
+      id: 4,
+      name: 'Un Dernier',
+      status: 'unlike',
+      content: 'Do eiusmod et dolore magna aliqua. ' +
+      'Ut enim ad minim veniam minim veniam, quis consequat. ' +
+      'Duis aute  minim veniam esse cillum dolore eu  minim veniamfugiat nulla pariatur. '
+    }
 
   ];
 
@@ -33,6 +41,15 @@ export class ArticleService {
 
   dislike(indexOfArticle: number) {
     this.articles[indexOfArticle].status = 'dislike';
+  }
+
+  getArticleById(id: number) {
+    const article = this.articles.find(
+      (articleObject) => {
+        return articleObject.id === id;
+      }
+    );
+    return article;
   }
 
 }
